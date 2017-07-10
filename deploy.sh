@@ -14,7 +14,7 @@ sf_upload()
 }
 
 deploylist="Hyperbian.zip"
-if [[ $TRAVIS_EVENT_TYPE =! 'pull_request' ]]; then
+if [[ $TRAVIS_EVENT_TYPE != 'pull_request' ]]; then
 	cd $TRAVIS_BUILD_DIR/deploy
 	echo "UPLOAD IMAGE: ${deploylist}"
 	sf_upload $deploylist dev/hyperbian
