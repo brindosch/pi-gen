@@ -17,6 +17,6 @@ deploylist="Hyperbian.zip"
 if [[ $TRAVIS_EVENT_TYPE =! 'pull_request' ]]; then
 	cd $TRAVIS_BUILD_DIR/deploy
 	echo "UPLOAD IMAGE: ${deploylist}"
-	sf_upload $deploylist dev/alpha/hyperbian
+	sf_upload $deploylist dev/hyperbian
 fi
 
