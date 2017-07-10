@@ -13,7 +13,7 @@ sf_upload()
 	EOD
 }
 
-deploylist="Hyperbian.zip"
+deploylist="HyperBian.zip"
 if [[ $TRAVIS_EVENT_TYPE != 'pull_request' ]]; then
 	cd $TRAVIS_BUILD_DIR/deploy
 	echo "UPLOAD IMAGE: ${deploylist}"
