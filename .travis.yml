@@ -16,6 +16,7 @@ addons:
     - libcap2-bin
     - grep
     - rsync
+    - expect
 script:
     - chmod +x ./deploy.sh
     - sudo bash ./build.sh
