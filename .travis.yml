@@ -1,0 +1,24 @@
+dist: trusty
+sudo: required
+addons:
+  apt:
+    packages:
+    - quilt
+    - qemu-user-static
+    - realpath
+    - parted
+    - debootstrap
+    - dosfstools
+    - zip
+    - zerofree
+    - pxz
+    - bsdtar
+    - libcap2-bin
+    - grep
+    - rsync
+    - expect
+script:
+    - chmod +x ./deploy.sh
+    - sudo bash ./build.sh
+after_success:
+    - sudo bash ./deploy.sh
