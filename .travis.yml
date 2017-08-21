@@ -1,24 +1,18 @@
-dist: trusty
 sudo: required
+
 addons:
   apt:
     packages:
-    - quilt
-    - qemu-user-static
-    - realpath
-    - parted
-    - debootstrap
-    - dosfstools
-    - zip
-    - zerofree
-    - pxz
-    - bsdtar
-    - libcap2-bin
-    - grep
-    - rsync
+    - binfmt-support
     - expect
+
+language: ruby
+
+services:
+  - docker
+
 script:
-    - chmod +x ./deploy.sh
-    - sudo bash ./build.sh
+    - sudo bash ./build-docker.sh
+
 after_success:
     - sudo bash ./deploy.sh
